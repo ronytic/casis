@@ -1,0 +1,25 @@
+
+#formLogin{
+	background-color:#FFF;
+
+	text-align:center;
+	-webkit-box-shadow:0px 0px 35px rgb(255,255,255);
+	border:#E5E5E5 1px solid;
+	margin-bottom:15px;
+}
+#formLogin label{
+	color:#CCC;
+	font-size:15pt;
+	margin:20px;
+}
+#formLogin input[type=text],#formLogin input[type=password]{
+	margin:10px;
+	padding:10px;
+	font-size:12pt;
+	width:160px;
+	border:#CCC 1px solid;
+}
+#formLogin input[type=submit]{
+	padding:10px;
+	font-weight:bolder;
+}

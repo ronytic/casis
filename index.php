@@ -28,7 +28,7 @@ include_once("cabecera.php");
 	<div class="prefix_3 grid_6 suffix_3">
     	<div class="resaltarcuerpo corner-all">
         	<form action="registrar.php" method="post" id="formulario">
-                <label for="ru">R.U./C.I.:</label><input type="<?php echo $tipo?>" name="ru" autofocus class="campotexto corner-all" id="ru" autocomplete="off" size="6"/><hr />
+                <label for="ru">R.U./C.I.:</label> <input type="<?php echo $tipo?>" name="ru" autofocus class="campotexto corner-all" id="ru" autocomplete="off" size="6"/><hr />
                 <input type="submit" value="Registrar" />
             </form>
         </div>

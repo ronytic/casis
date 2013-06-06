@@ -11,7 +11,7 @@ include_once("../cabecerahtml.php");
 include_once("../cabecera.php");
 ?>
 	<div class="prefix_2 grid_8 suffix_2">
-    <h2>Asistencias</h2>
+    <h2>Entrega de Materiales</h2>
     Fecha:<input type="date" name="fecha" value="<?php echo date("Y-m-d");?>" id="fecha" required="required"/><input type="submit" value="Revisar" class="mediano" id="revisar">
     </div>
     <div class="clear"></div>

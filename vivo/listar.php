@@ -34,13 +34,13 @@ $Fecha=date("Y-m-d");
 						<div class="datos">
 							<h2>
 							<?php
-								echo utf8_encode(mb_strtoupper(utf8_decode($al['Paterno']." ".$al['Materno']." ".$al['Nombres'])));
+								echo utf8_encode(mb_strtoupper(utf8_decode($al['Paterno']." ".$al['Materno']." ".$al['Nombres']),"utf8"));
 							?>
 							</h2>
-							<span>R.U.<?php
+							<span>R.U.: <?php
 								echo $al['Ru'];
-							?></span>
-							<span class="asistencias corner-all">Cantidad de Asistencias: 
+							?></span><br />
+							<span class="asistencias corner-all">Asistencias: 
 							<?php $a=$asistencia->cantidadAsistenciasTotal($al['CodAlumno']);
 							echo $a['cantidad'];?> Días
 							</span>

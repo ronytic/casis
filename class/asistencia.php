@@ -19,7 +19,7 @@ class asistencia extends db{
 	}
 	function mostrarAsistentesXFecha($Fecha){
 		$this->campos=array("*");
-		return $this->getRecords("FechaRegistro='$Fecha' and Activo=1",0,0,0,0,0,1);
+		return $this->getRecords("FechaRegistro='$Fecha' and Activo=1","FechaRegistro,HoraRegistro",0,0,0,0,1);
 	}
 	function mostrarPermisosXFecha($Fecha){
 		$this->campos=array("*");

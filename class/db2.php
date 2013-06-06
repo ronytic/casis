@@ -145,7 +145,7 @@ class db{
 			array_push($data,$k."=".$v);
 		}
 		$datos=implode(",",$data);
-//		echo "UPDATE {$this->tabla} SET $datos $where";
+		//echo "UPDATE {$this->tabla} SET $datos $where";
 		mysql_query ("UPDATE {$this->tabla} SET $datos $where");
 	}
 	private function getTableFields ($asArray=false){

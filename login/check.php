@@ -1,5 +1,5 @@
 <?php
-session_start();
+@session_start();
 $archivo=$_SERVER['SCRIPT_NAME'];
 $folderFile=explode("/",$archivo);
 $subfolder=$folderFile[1];

@@ -3,14 +3,14 @@ include_once("../login/check.php");
 if(!empty($_POST)){
 	$Fecha=str_replace("/","-",$_POST['fecha']);
 	$Fecha=date("Y-m-d",strtotime($Fecha));
-	include_once("../class/asistencia.php");
+	include_once("../class/material.php");
 	include_once("../class/alumnos.php");
-	$asistencia=new asistencia;
+	$material=new material;
 	$alumnos=new alumnos;
-	$asis=$asistencia->mostrarAsistentesXFecha($Fecha);
+	$asis=$material->mostrarMaterialXFecha($Fecha);
 	if(count($asis)){
 	?>
-		Alumnos que ingresaron al Evento en la fecha: <?php echo date("d-m-Y",strtotime($Fecha));?>
+		Alumnos que se les entregaron material en la fecha: <?php echo date("d-m-Y",strtotime($Fecha));?>
     	<table class="tabla">
         	<tr class="cabecera"><td>Nº</td><td>Paterno</td><td>Materno</td><td>Nombres</td><td>Hora de Registro</td></tr>
         
@@ -29,7 +29,7 @@ if(!empty($_POST)){
    <?php
 	}else{
 		?>
-        <h2>No existe Asistentes en la fecha: <?php echo date("d-m-Y",strtotime($Fecha));?></h2>
+        <h2>No existe entregas de material en la fecha: <?php echo date("d-m-Y",strtotime($Fecha));?></h2>
         <?php	
 	}
 }

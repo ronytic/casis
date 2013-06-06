@@ -23,6 +23,11 @@ class alumnos extends db{
 		$this->campos=array("*");
 		return $this->getRecords("CodAlumno=$CodAlumno");
 	}
+	function mostrarDatosXCi($Ci){
+		$this->campos=array("*");
+		return $this->getRecords("Ci='$Ci'");
+	}
+	
 	function registrarAlumno($values){
 		$this->insertRow($values,1);	
 	}

@@ -1,8 +1,8 @@
 <?php
 include_once("../login/check.php");
 include_once("../config.php");
-include_once("../class/asistencia.php");
-$asistencia=new asistencia;
+include_once("../class/material.php");
+$material=new material;
 $folder="../";
 include_once("../cabecerahtml.php");
 ?>
@@ -11,13 +11,13 @@ include_once("../cabecerahtml.php");
 include_once("../cabecera.php");
 ?>
 	<div class="prefix_2 grid_8 suffix_2">
-    	<h2>Estadisticas de Asistencias</h2>
-    	Cantidad Total de Alumnos que ingresaron al Evento.
+    	<h2>Estadisticas de Entrega de Materiales</h2>
+    	Cantidad Total de Alumnos que entregaron materiales.
     	<table class="tabla">
         	<tr class="cabecera"><td>Fecha</td><td>Cantidad</td></tr>
         
 		<?php
-			$asis=$asistencia->mostrarAsistenciaXDias();
+			$asis=$material->mostrarMaterialXDias();
 			
 			if(count($asis,COUNT_RECURSIVE)==2){
 				?>

@@ -37,7 +37,7 @@ if(!empty($_POST)){
 			
 			$asistencia->registrarAsistencia($values);
 			$tmp_acciones->registrarAsistencia($val);
-			$material->registrarMaterial($values);
+			//$material->registrarMaterial($values);
 			if($mat['Can']==0){
 				$material->registrarMaterial($values);
 			}

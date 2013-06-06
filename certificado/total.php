@@ -27,10 +27,10 @@ class PDF extends FPDF{
 		else
 			$pdf->SetFont("Helvetica","",26);
 		
-		$fecha1=$asistencia->verAsistenciaFecha($al['CodAlumno'],"2012-05-28");
-		$fecha2=$asistencia->verAsistenciaFecha($al['CodAlumno'],"2012-05-29");
-		$fecha3=$asistencia->verAsistenciaFecha($al['CodAlumno'],"2012-05-30");
-		$fecha4=$asistencia->verAsistenciaFecha($al['CodAlumno'],"2012-05-31");
+		$fecha1=$asistencia->verAsistenciaFecha($al['CodAlumno'],"2013-06-10");
+		$fecha2=$asistencia->verAsistenciaFecha($al['CodAlumno'],"2013-06-11");
+		$fecha3=$asistencia->verAsistenciaFecha($al['CodAlumno'],"2013-06-12");
+		$fecha4=$asistencia->verAsistenciaFecha($al['CodAlumno'],"2013-06-13");
 		$total=$fecha1['Cantidad']+$fecha2['Cantidad']+$fecha3['Cantidad']+$fecha4['Cantidad'];
 
 	if($total>=3)

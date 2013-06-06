@@ -121,10 +121,14 @@ input[type=date],input[type=text].texto{
 }
 a{
 	padding:5px;
-	margin:15px;
+	margin:1px;
 	display:inline-block;
 	color:#003366;
-	text-decoration:none;	
+	text-decoration:none;
+	width:70px;
+	text-align:center;
+	border:#CCC  1px solid;	
+	margin-top:15px;
 }
 a:hover{
 	background-color:#FFF;
@@ -156,6 +160,7 @@ a:hover{
 
 div.datos{
 display:inline-block;	vertical-align:top;
+
 }
 ul.alumnos li,ul.alumnos,ul.alumnos li h2{
 	padding:0px;
@@ -173,11 +178,15 @@ ul.alumnos li{
 	background-color:#FFFFFF;
 	vertical-align:top;
 }
+ul.alumnos li h2{
+	font-size:1.5em;	
+}
 ul.alumnos li img{
 	width:100px;
 	height:100px;	
 	display:inline-block;	
-	box-shadow:#000 3px 3px 1px;
+	border-radius:5px;
+	margin-right:10px;
 }
 ul.alumnos li span{
 	font-size:20px;
@@ -190,9 +199,20 @@ ul.alumnos li span.msg{
 }
 div.lateral {
 	font-size:40px;	
+	text-align:center
 }
 div.lateral span{
 	font-size:80px;	
+
+}
+
+#result img{
+	width:100px;
+	height:100px;	
+	display:inline-block;	
+	border-radius:5px;
+	margin-right:10px;
+	
 }
 /*animaciones al logo*/
 #logo{
@@ -239,7 +259,7 @@ div.lateral span{
 ul.alumnos li span.asistencias{
 	color:#000;
 	background-color:#ccc;
-	padding:10px;
+	padding:5px;
 }
 .linea{
 	display:inline-block;	
@@ -250,4 +270,10 @@ ul.alumnos li span.asistencias{
 	padding:10px;
 	text-align:center;
 	float:right;
+}
+.der{
+	text-align:right;	
+}
+.centrar{
+	text-align:center;	
 }

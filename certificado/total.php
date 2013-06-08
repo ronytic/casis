@@ -39,10 +39,10 @@ class PDF extends FPDF{
 		$pdf->AddPage();
 		//Apellidos
 		$pdf->SetXY(110,60);
-		$pdf->Cell(160,12,utf8_decode(ucwords(mb_strtolower($al['Paterno']." ".$al['Materno'],"utf8"))),1,0,"C",$relleno);
+		$pdf->Cell(160,12,utf8_decode(ucwords(mb_strtolower($al['Paterno']." ".$al['Materno'],"utf8"))),0,0,"C",$relleno);
 		//Nombres
 		$pdf->SetXY(110,75);
-		$pdf->Cell(160,12,utf8_decode(ucwords(mb_strtolower($al['Nombres'],"utf8"))),1,0,"C",$relleno);
+		$pdf->Cell(160,12,utf8_decode(ucwords(mb_strtolower($al['Nombres'],"utf8"))),0,0,"C",$relleno);
 
 	}
 		

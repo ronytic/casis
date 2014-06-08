@@ -12,7 +12,7 @@ if(!empty($_POST)){
 	?>
 		Alumnos que ingresaron al Evento en la fecha: <?php echo date("d-m-Y",strtotime($Fecha));?>
     	<table class="tabla">
-        	<tr class="cabecera"><td>Nº</td><td>Paterno</td><td>Materno</td><td>Nombres</td><td>Hora de Registro</td></tr>
+        	<tr class="cabecera"><td>Nº</td><td>Paterno</td><td>Materno</td><td>Nombres</td><td>Ru</td><td>Carnet</td><td>Hora de Registro</td></tr>
         
 		<?php
 			
@@ -22,7 +22,14 @@ if(!empty($_POST)){
 				$i++;
 				$al=$alumnos->mostrarDatosXCod($as['CodAlumno']);
 				?>
-                <tr class="contenido"><td><?php echo $i;?></td><td><?php echo ucwords(mb_strtolower($al['Paterno'],"utf8"))?></td><td><?php echo ucwords(mb_strtolower($al['Materno'],"utf8"))?></td><td><?php echo ucwords(mb_strtolower($al['Nombres'],"utf8"))?></td><td><?php echo $as['HoraRegistro']?></td></tr>
+                <tr class="contenido">
+                	<td><?php echo $i;?></td>
+                    <td><?php echo ucwords(mb_strtolower($al['Paterno'],"utf8"))?></td>
+                    <td><?php echo ucwords(mb_strtolower($al['Materno'],"utf8"))?></td>
+                    <td><?php echo ucwords(mb_strtolower($al['Nombres'],"utf8"))?></td>
+                    <td><?php echo ucwords(mb_strtolower($al['Ru'],"utf8"))?></td>
+                    <td><?php echo ucwords(mb_strtolower($al['Ci'],"utf8"))?></td>
+                    <td><?php echo $as['HoraRegistro']?></td></tr>
                 <?php	
 			}
 		?></table>

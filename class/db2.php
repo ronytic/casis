@@ -9,7 +9,7 @@ class db{
 	var $resultado;
 	var $campos=array();
 	function __construct(){
-		global $bost,$user,$pass,$database;
+		global $host,$user,$pass,$database;
 		@$link=mysql_connect($host,$user,$pass);
 		if($link){
 			if(@mysql_select_db($database,$link)){

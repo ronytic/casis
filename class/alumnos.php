@@ -31,5 +31,8 @@ class alumnos extends db{
 	function registrarAlumno($values){
 		$this->insertRow($values,1);	
 	}
+	function actualizarAlumno($valores,$where){
+		$this->updateRow($valores,$where);
+	}
 }
 ?>

@@ -2,8 +2,9 @@
 include_once("../class/alumnos.php");
 
 $alumnos=new alumnos;
+$genero=$_POST['genero'];
 
-$numci=search();
+$numci=search($genero);
 if($numci!="")
 {
 	echo $numci;
@@ -11,10 +12,11 @@ if($numci!="")
 	echo "00000000";	
 }
 
-function search()
+function search($genero)
 {
+	$Gen=($genero!="")?" and a.Genero='$genero'":"";
 	$Fecha=date("Y-m-d");
-	$sql="SELECT a.Ci from alumnos a,asistencia asis WHERE asis.CodAlumno=a.CodAlumno and asis.Sorteado=0 and asis.FechaRegistro='$Fecha'";
+	$sql="SELECT a.Ci from alumnos a,asistencia asis WHERE asis.CodAlumno=a.CodAlumno and asis.Sorteado=0 and asis.FechaRegistro='$Fecha' $Gen";
 	$res=mysql_query($sql);
 	$c=mysql_num_rows($res);
 

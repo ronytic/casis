@@ -9,6 +9,7 @@ $alumnos=new alumnos;
 $Fecha=date("Y-m-d");
 ?>
 <?php include_once("../cabecerahtml.php");?>
+<script language="javascript" type="text/javascript" src="../js/jquery.marquee.min.js"></script>
 <script language="javascript" type="text/javascript" src="../js/vivo.js"></script>
 </head>
 <body>
@@ -28,5 +29,6 @@ $Fecha=date("Y-m-d");
     </div>
     <div class="clear"></div>
 </div>
+<?php include_once("../pieanuncio.php");?>
 </body>
 </html>

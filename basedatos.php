@@ -6,6 +6,6 @@ setlocale(LC_ALL, 'esp');
 $host="localhost";
 $user="root";
 $pass="";
-$database="casis2012";
+$database="casis2014";
 
 ?>

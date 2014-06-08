@@ -97,7 +97,7 @@ h1{
 	font-size:60px;
 	font-family:"sansation";
 	color:#FFFFFF;	
-	text-shadow: 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+	/*text-shadow: 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;*/
 	font-style:transparent;
 }
 .resaltarcuerpo{
@@ -108,10 +108,15 @@ h1{
 	-webkit-box-shadow:0px 0px 15px rgb(0,0,0);
 	box-shadow:0px 0px 15px rgb(0,0,0)
 }
-input[type=date],input[type=text].texto{
+input[type=date],input[type=text].texto,select,option{
 	padding:10px;
 	font-size:12px;	
 	border:#CCCCCC 1px solid;
+}
+input[type=text].texto:focus{
+	padding:10px;
+	font-size:12px;	
+	border:#3366CC 1px solid;
 }
 .campotexto{
 	padding:10px;
@@ -276,4 +281,26 @@ ul.alumnos li span.asistencias{
 }
 .centrar{
 	text-align:center;	
+}
+.piepagina{
+	width:67%;
+	position:absolute;
+	overflow: hidden;
+	bottom:0px;
+	background-color:#FFF;
+	border-top-right-radius:5px;
+	border-top-left-radius:5px;
+	padding:2px 5px 2px 5px;
+	font-size:110%;
+}
+.contacto{
+	width:28%;	
+	position:absolute;
+	overflow: hidden;
+	bottom:0px;
+	background-color:#FFF;
+	border-top-right-radius:5px;
+	border-top-left-radius:5px;
+	padding:2px 5px 2px 5px;
+
 }

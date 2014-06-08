@@ -1,7 +1,20 @@
 var delay=50;var swp=0;var vn1=0;var vn2=0;var vn3=0;var vn4=0;var vn5=0;var vn6=0;var vn7=0;var vn8=0;
-var ci;
+var ci,cinormal,cihombre,cimujer;
 $(document).ready(function(){
-	$.post('search.php',response);   
+	$('#anuncio').marquee({
+		//speed in milliseconds of the marquee
+    duration: 15000,
+    //gap in pixels between the tickers
+    gap: 50,
+    //time in milliseconds before the marquee will start animating
+    delayBeforeStart: 0,
+    //'left' or 'right'
+    direction: 'left',
+    //true or false - should the marquee be duplicated to show an effect of continues flow
+    duplicated: true
+	});
+	
+	buscar();  
 	
 	/*Girar*/
 	$('#n1').val('1');
@@ -23,11 +36,16 @@ $(document).ready(function(){
 	   //$.post('search.php',response);
 	   //$(".text").slideUp();
 		$('#randomnumber').fadeOut(0); 
-		$('#randomnumber2').fadeIn(0);   
+		$('#randomnumber2').fadeIn(0);  
 	});
-	$(document).on('keypress',null,'n',function(e){e.preventDefault();$('#showname').click()});
+	/*alert('Ci:  '+cinormal);
+		alert('CiH: '+cihombre);
+		alert('CiM: '+cimujer); */
+	$(document).on('keypress',null,'v',function(e){e.preventDefault();$('#showname').click()});
 	$(document).on('keypress',null,'q',function(e){e.preventDefault();$('#reset').click()});
-	$(document).on('keypress',null,'w',function(e){e.preventDefault();$('#parar').click();});
+	$(document).on('keypress',null,'w',function(e){e.preventDefault();response(cinormal);$('#parar').click();});
+	$(document).on('keypress',null,'h',function(e){e.preventDefault();response(cihombre);$('#parar').click();});
+	$(document).on('keypress',null,'m',function(e){e.preventDefault();response(cimujer);$('#parar').click();});
 	$(document).on('keypress',null,'r',function(e){e.preventDefault();$('#reset').click();});
 	$('#girar').click();
 	$('#showname').click(function(){
@@ -47,11 +65,16 @@ $(document).ready(function(){
 			$('#result').slideUp(500);
 			$('#randomnumber').fadeIn(0); 
 			$('#randomnumber2').fadeOut(0);
-			$.post('search.php',response);
+			buscar();
 			
 		}
 	});
 });
+function buscar(){
+	$.post('search.php',function(data){cinormal=data;});	
+	$.post('search.php',{'genero':'M'},function(data){cihombre=data;});	
+	$.post('search.php',{'genero':'F'},function(data){cimujer=data;});	
+}
 function girar1()
 {
 	var n=parseInt($('#n1').val());
@@ -174,8 +197,7 @@ function response(data)
 	$('#nc7').val(vn7);
 	$('#nc8').val(vn8);
 }
-function responsename(data)
-{
+function responsename(data){
 	$('#result').html(data);
 	$('#result').slideDown(500);
 }

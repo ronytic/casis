@@ -7,6 +7,7 @@ if(!empty($_POST)){
 	$nombres=$_POST['nombres'];
 	$ci=$_POST['ci'];
 	$ru=$_POST['ru'];
+	$genero=$_POST['genero'];
 	include_once("../class/alumnos.php");
 	$alumnos=new alumnos;
 	include_once("../cabecerahtml.php");
@@ -20,6 +21,7 @@ if(!empty($_POST)){
 					"Materno"=>"'$materno'",
 					"Ru"=>"'$ru'",
 					"Ci"=>"'$ci'",
+					"Genero"=>"'$genero'",
 					"Valido"=>1
 					);
 		$alumnos->registrarAlumno($values);
@@ -31,6 +33,7 @@ if(!empty($_POST)){
             <tr class="contenido"><td>Materno</td><td><?php echo $materno;?></td></tr>
             <tr class="contenido"><td>Nombres</td><td><?php echo $nombres;?></td></tr>
             <tr class="contenido"><td>C.I.</td><td><?php echo $ci;?></td></tr>
+            <tr class="contenido"><td>Género</td><td><?php echo $genero=='M'?'Masculino':'Femenino';?></td></tr>
         </table>
         </div>
         <?php

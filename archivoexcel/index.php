@@ -51,7 +51,8 @@ foreach($celdas as $x => $y){
 					"Genero"=>"'$dgenero'",
 					"Valido"=>1
 					);
-		$alumnos->$actualizarAlumno($values,"Ci=".$dci);
+					
+		$alumnos->actualizarAlumno($values,"Ci=".$dci);
 	}else{
 		
 	

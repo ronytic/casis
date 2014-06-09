@@ -22,6 +22,7 @@ $Nivel=$_SESSION['Nivel'];
 		if($Nivel==1 || $Nivel==3):
 			?>
            		<a href="<?php echo $folder;?>sorteo/" class="corner-all">SORTEO</a>
+                <a href="<?php echo $folder;?>vivo/" class="corner-all" target="_blank">VIVO</a>
             	<a href="<?php echo $folder;?>asistencia/permiso.php" class="corner-all">PERMISOS</a>
 			<?php
 		endif;

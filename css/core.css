@@ -130,10 +130,11 @@ a{
 	display:inline-block;
 	color:#003366;
 	text-decoration:none;
-	width:70px;
+	width:65px;
 	text-align:center;
 	border:#CCC  1px solid;	
 	margin-top:15px;
+	font-size:95%;
 }
 a:hover{
 	background-color:#FFF;

@@ -19,7 +19,7 @@ include_once("cabecerahtml.php");
 include_once("cabecera.php");
 ?>
 
-	<div class="prefix_1 grid_10 suffix_1">
+	<div class="prefix_0 grid_12 suffix_0">
     	<div id="respuesta" class="">
 
         </div>	

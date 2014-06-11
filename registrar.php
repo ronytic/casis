@@ -39,7 +39,9 @@ if(!empty($_POST)){
 			
 		}
 		$datosasistencias.="</table>";
-		//$asistencia->registrarAsistencia($values);
+		if($asis['Can']<=1){
+		$asistencia->registrarAsistencia($values);
+		}
 		//$tmp_acciones->registrarAsistencia($val);
 		$CantidadHoy=$asis['Can'];
 		$CantidadTotal=$a['cantidad'];

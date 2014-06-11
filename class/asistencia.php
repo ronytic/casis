@@ -40,5 +40,9 @@ class asistencia extends db{
 		$this->campos=array("count(*) as cantidad");
 		return $this->getRecords("CodAlumno=$CodAlumno and Activo=1");	
 	}
+	function mostrarAsistenciasTotal($CodAlumno){
+		$this->campos=array("*");
+		return $this->getRecords("CodAlumno=$CodAlumno and Activo=1");	
+	}
 }
 ?>

@@ -19,7 +19,7 @@ class asistencia extends db{
 	}
 	function mostrarAsistentesXFecha($Fecha){
 		$this->campos=array("*");
-		return $this->getRecords("FechaRegistro='$Fecha' and Activo=1","FechaRegistro,HoraRegistro",0,0,0,0,1);
+		return $this->getRecords("FechaRegistro='$Fecha' and Activo=1 and HoraRegistro>='8:00:00'","FechaRegistro,HoraRegistro",0,0,0,0,1);
 	}
 	function mostrarPermisosXFecha($Fecha){
 		$this->campos=array("*");
@@ -27,7 +27,7 @@ class asistencia extends db{
 	}
 	function verAsistentesVivo($Fecha,$Limite,$Valido){
 		$this->campos=array("*");	
-		return $this->getRecords("FechaRegistro='$Fecha' and Activo=$Valido","CodAsistencia",0,$Limite,0,1,1);
+		return $this->getRecords("FechaRegistro='$Fecha' and Activo=$Valido and HoraRegistro>='8:00:00'","CodAsistencia",0,$Limite,0,1,1);
 	}
 	function verAsistenciaFecha($CodAlumno,$Fecha){
 		$this->campos=array("count(*) as Cantidad");	
